@@ -151,14 +151,14 @@ export default function Home() {
           placeholder="https://example.com"
         />
         <Button
-          className="w-full md:w-20"
+          className="w-full md:w-48"
           onClick={handleSubmit}
           disabled={isPending}
         >
           {isPending ? "Shortening..." : "Shorten"}
         </Button>
       </div>
-      {error && <div style={{ color: "red" }}>{error}</div>}
+      {error && <div style={{ color: "red" }} className="text-sm mt-4">{error}</div>}
       {shortUrl && (
         <div className="space-y-2 mt-4">
           <Alert variant="success" className="mb-10">
